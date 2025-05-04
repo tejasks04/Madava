@@ -1,0 +1,62 @@
+/* Home.css */
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .slider-image {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    z-index: 1;
+    opacity: 1;
+  }
+  
+  .slide-in {
+    z-index: 2;
+    transform: translateX(100%);
+    animation: slideIn 1s forwards ease-in-out;
+  }
+  
+  .slide-out {
+    z-index: 1;
+    transform: translateX(0%);
+    animation: slideOut 1s forwards ease-in-out;
+  }
+  
+  .hidden {
+    opacity: 0;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .slider-wrapper {
+      height: 30vh;
+    }
+  }
+  

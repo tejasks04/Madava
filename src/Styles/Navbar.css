@@ -1,0 +1,35 @@
+/* Navbar.css */
+.nav-main {
+  font-family: 'Segoe UI', sans-serif;
+  padding: 0.5rem 1rem;
+}
+
+.logo {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.madhav-name-main {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.madhav-name-sub {
+  font-size: 0.75rem;
+  color: #e0e0e0;
+  margin-top: -2px;
+}
+
+/* Responsive font sizing */
+@media (max-width: 576px) {
+  .madhav-name-main {
+    font-size: 0.9rem;
+  }
+
+  .madhav-name-sub {
+    font-size: 0.7rem;
+  }
+}
