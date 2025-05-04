@@ -17,7 +17,7 @@ function App() {
           <Route path="/about" element={<About/>}/>
           <Route path="/experience" element={<Experience/>}/>
           <Route path="/contact" element={<Contact/>}/>
-          <Route path="*" element={<h1 style={{color:"red"}}>Page Not Found!</h1>}/>
+          <Route path="*" element={<h1 style={{color:"red"}}>Page Not Found At all!</h1>}/>
         </Routes>
         <Footer/>
       </Router>
