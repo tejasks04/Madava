@@ -5,6 +5,7 @@ import arc3 from '../images/arc3.jpg';
 import arc4 from '../images/arc4.jpg';
 import arc5 from '../images/arc5.jpg';
 import '../Styles/Home.css'; // Custom styles
+import ArchitectCard from '../Components/ArchitectCard';
 
 function Home() {
   const images = [arc1, arc2, arc3, arc4, arc5];
@@ -35,7 +36,7 @@ function Home() {
       {/* Hero Slider */}
       <div className="slider-wrapper">
         <div className="transparent-card text-white text-center">
-          <h1 className="display-4">Welcome to ArchiScape</h1>
+          <h1 className="display-4">Welcome to Madhav Architect</h1>
           <p className="lead">
             Explore innovative designs, timeless architecture, and structural elegance from around the world.
           </p>
@@ -91,9 +92,9 @@ function Home() {
       {/* About Section */}
       <section className="home-about py-5">
         <div className="container text-center">
-          <h2 className="mb-3">About ArchiScape</h2>
+          <h2 className="mb-3">About Madhav Architect</h2>
           <p className="lead mx-auto" style={{ maxWidth: '800px' }}>
-            ArchiScape is a platform dedicated to showcasing the finest architecture from around the globe.
+            Madhav Architect is a platform dedicated to showcasing the finest architecture from around the globe.
             Whether you're an aspiring architect, a student, or simply love great design, we bring inspiration to your screen.
           </p>
         </div>
@@ -132,6 +133,7 @@ function Home() {
           ))}
         </div>
       </section>
+      <ArchitectCard/>
 
       {/* Reviews Section */}
       <section className="home-reviews bg-light py-5">
@@ -140,7 +142,7 @@ function Home() {
           <div className="row g-4">
             {[
               {
-                quote: 'ArchiScape is an incredible resource for discovering fresh ideas and historical inspiration!',
+                quote: 'Madhav Architect is an incredible resource for discovering fresh ideas and historical inspiration!',
                 name: 'Aditi Sharma',
               },
               {
@@ -148,7 +150,7 @@ function Home() {
                 name: 'Rajeev Khanna',
               },
               {
-                quote: 'I always come to ArchiScape when looking for concepts for my college design submissions!',
+                quote: 'I always come to Madhav Architect when looking for concepts for my college design submissions!',
                 name: 'Meera Patel',
               },
             ].map((review, index) => (

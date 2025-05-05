@@ -76,6 +76,9 @@
   .slider-wrapper {
     height: 60vh;
   }
+  .architect-card-container {
+    display: none;
+  }
 
   .transparent-card {
     padding: 18px 24px;
@@ -95,6 +98,9 @@
   .slider-wrapper {
     height: 50vh;
   }
+  .architect-card-container {
+    display: none;
+  }
 
   .transparent-card {
     padding: 10px;
@@ -107,5 +113,10 @@
 
   .transparent-card p {
     font-size: 0.95rem;
+  }
+}
+@media (max-width: 768px) {
+  .architect-card-container {
+    display: none;
   }
 }

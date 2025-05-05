@@ -1,0 +1,242 @@
+/* Container for the whole animation */
+.home-animation-container {
+    position: relative;
+    height: 500px;
+    background: #f0f0f0;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Home animation elements */
+.left-block,
+.right-block,
+.triangle-roof {
+    position: absolute;
+    background-color: #0077b6;
+    opacity: 0.9;
+    transition: all 1s ease-in-out;
+}
+
+/* Left Block coming from the left */
+.left-block {
+    width: 100px;
+    height: 100px;
+    left: -120px;
+    top: 200px;
+    animation: slideInLeft 2s forwards;
+}
+
+/* Right Block coming from the right */
+.right-block {
+    width: 100px;
+    height: 100px;
+    right: -120px;
+    top: 200px;
+    animation: slideInRight 2s forwards;
+    animation-delay: 0.5s;
+}
+
+/* Triangle Roof coming from top */
+.triangle-roof {
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 75px solid #0096c7;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideDown 2s forwards;
+    animation-delay: 1s;
+}
+
+/* Title */
+.title {
+    margin-top: 300px;
+    font-size: 1.8rem;
+    color: #023e8a;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 2.5s;
+}
+
+/* Left Side Points */
+.left-points {
+    position: absolute;
+    left: 10%;
+    top: 150px;
+    color: #fff;
+    opacity: 0;
+    padding: 15px;
+    border-radius: 8px;
+    animation: fadeInLeft 1s forwards;
+    animation-delay: 3s;
+}
+
+/* Left Point Styles */
+.left-points .point-1 {
+    background-color: #4CAF50; /* Green */
+}
+
+.left-points .point-2 {
+    background-color: #FF5722; /* Orange */
+}
+
+.left-points .point-3 {
+    background-color: #009688; /* Teal */
+}
+
+/* Right Side Points */
+.right-points {
+    position: absolute;
+    right: 10%;
+    top: 150px;
+    color: #fff;
+    opacity: 0;
+    padding: 15px;
+    border-radius: 8px;
+    animation: fadeInRight 1s forwards;
+    animation-delay: 3s;
+}
+
+/* Right Point Styles */
+.right-points .point-4 {
+    background-color: #673AB7; /* Purple */
+}
+
+.right-points .point-5 {
+    background-color: #FF9800; /* Amber */
+}
+
+.right-points .point-6 {
+    background-color: #2196F3; /* Blue */
+}
+
+/* General Point Styling */
+.left-points .point-1, .left-points .point-2, .left-points .point-3,
+.right-points .point-4, .right-points .point-5, .right-points .point-6 {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.left-points .point-1:hover, .left-points .point-2:hover, .left-points .point-3:hover,
+.right-points .point-4:hover, .right-points .point-5:hover, .right-points .point-6:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    to {
+        left: calc(50% - 100px);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        right: calc(50% - 100px);
+    }
+}
+
+@keyframes slideDown {
+    to {
+        top: 125px;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        left: 10%;
+    }
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        right: 10%;
+    }
+}
+
+/* Responsiveness for Smaller Screens */
+@media (max-width: 768px) {
+    .home-animation-container {
+        height: 400px;
+    }
+
+    .left-block, .right-block {
+        width: 80px;
+        height: 80px;
+    }
+
+    .triangle-roof {
+        width: 0;
+        height: 0;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 60px solid #0096c7;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .left-points, .right-points {
+        top: 130px;
+        left: 5%;
+        right: 5%;
+        font-size: 1rem;
+    }
+
+    /* Hide points on mobile */
+    .left-points,
+    .right-points {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-animation-container {
+        height: 300px;
+    }
+
+    .left-block, .right-block {
+        width: 60px;
+        height: 60px;
+    }
+
+    .triangle-roof {
+        width: 0;
+        height: 0;
+        border-left: 45px solid transparent;
+        border-right: 45px solid transparent;
+        border-bottom: 45px solid #0096c7;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .left-points, .right-points {
+        top: 120px;
+        left: 5%;
+        right: 5%;
+        font-size: 0.9rem;
+    }
+
+    /* Hide points on small screens */
+    .left-points,
+    .right-points {
+        display: none;
+    }
+}
