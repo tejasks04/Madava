@@ -1,62 +1,104 @@
-/* Home.css */
-
 .slider-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider-image {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease;
+  opacity: 1;
+  z-index: 0;
+}
+
+.slide-in {
+  animation: fadeIn 1s forwards;
+  z-index: 1;
+}
+
+.slide-out {
+  animation: fadeOut 1s forwards;
+  z-index: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.transparent-card {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(50, 39, 97, 0.506);
+  padding: 20px 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  color: #000;
+  z-index: 10;
+  text-align: center;
+  max-width: 90%;
+}
+
+.transparent-card h1 {
+  margin: 0 0 10px;
+  font-size: 2.5rem;
+}
+
+.transparent-card p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
   .slider-image {
-    position: absolute;
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-    z-index: 1;
-    opacity: 1;
+    height: 40%;
   }
-  
-  .slide-in {
-    z-index: 2;
-    transform: translateX(100%);
-    animation: slideIn 1s forwards ease-in-out;
+
+  .transparent-card {
+    top: 40px;
+    padding: 16px 24px;
+    max-width: 100%;
   }
-  
-  .slide-out {
-    z-index: 1;
-    transform: translateX(0%);
-    animation: slideOut 1s forwards ease-in-out;
+
+  .transparent-card h1 {
+    font-size: 1.0rem;
   }
-  
-  .hidden {
-    opacity: 0;
+
+  .transparent-card p {
+    font-size: 1rem;
   }
-  
-  @keyframes slideIn {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(0%);
-    }
+}
+
+@media (max-width: 480px) {
+  .slider-image {
+    height: 40%;
+    max-width: 100%;
   }
-  
-  @keyframes slideOut {
-    from {
-      transform: translateX(0%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+
+  .transparent-card {
+    top: 38px;
+    padding: 12px;
+    max-width: 100%;
   }
-  
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    .slider-wrapper {
-      height: 30vh;
-    }
+
+  .transparent-card h1 {
+    font-size: 1.4rem;
   }
-  
+
+  .transparent-card p {
+    font-size: 0.95rem;
+  }
+}
+
