@@ -1,6 +1,6 @@
 function About() {
     return (
-        <h1>this is about page.</h1>
+        <h1>Hii this is message from Yashas.</h1>
     );
 }
 
